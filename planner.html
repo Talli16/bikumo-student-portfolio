@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive academic planner for managing study tasks.">
+  <title>Academic Planner | Bikumo Student Portfolio</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">B</span><span>Bikumo<span class="gold-text">Portfolio</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Me</a><a href="projects.html">Projects</a><a class="active" href="planner.html">Academic Planner</a><a href="contact.html">Contact</a></nav></div></header>
+  <main id="main-content">
+    <section class="page-hero"><div class="container"><p class="eyebrow">STAY ON TRACK</p><h1>Academic <span class="gold-text">Planner</span></h1><p class="hero-lead">Add study tasks, track your progress, and keep your academic week organised.</p></div></section>
+    <section class="section container planner-layout">
+      <div class="planner-main">
+        <div class="content-card"><div class="planner-title-row"><div><p class="eyebrow">YOUR TASK LIST</p><h2>Plan your next step.</h2></div><span class="planner-icon">✓</span></div>
+          <form id="task-form" class="task-form" novalidate><div class="form-field"><label for="task-title">Task description</label><input id="task-title" name="task-title" type="text" maxlength="120" placeholder="e.g. Complete COS 106 assignment" required></div><div class="form-row"><div class="form-field"><label for="task-date">Due date (optional)</label><input id="task-date" name="task-date" type="date"></div><div class="form-field"><label for="task-priority">Priority</label><select id="task-priority" name="task-priority"><option value="Normal">Normal</option><option value="High">High</option><option value="Low">Low</option></select></div></div><button class="button button-primary" type="submit">＋ Add task</button><p id="task-feedback" class="form-feedback" role="status" aria-live="polite"></p></form>
+        </div>
+        <div class="content-card"><div class="task-toolbar"><h2>Your tasks</h2><label class="filter-label" for="task-filter">Show <select id="task-filter"><option value="all">All tasks</option><option value="active">Active</option><option value="completed">Completed</option></select></label></div><div class="task-progress"><div class="progress-label"><span id="task-count">0 tasks</span><span id="task-progress-text">0% completed</span></div><div class="progress-track"><span id="task-progress-bar"></span></div></div><ul id="task-list" class="task-list" aria-live="polite"><li class="empty-state">Your task list is empty. Add your first task above.</li></ul><div class="task-actions"><button class="button button-outline button-small" type="button" id="clear-completed">Clear completed</button><button class="button button-danger button-small" type="button" id="clear-all">Delete all</button></div></div>
+      </div>
+      <aside class="planner-side"><article class="gold-panel"><span class="eyebrow">A STUDY REMINDER</span><h2>Progress over perfection.</h2><p>Break large assignments into smaller steps. Add realistic deadlines and review your task list regularly.</p></article><article class="content-card"><p class="eyebrow">QUICK STUDY CHECKLIST</p><h2>Before you study</h2><ul class="check-list"><li>Choose one clear goal</li><li>Keep course materials ready</li><li>Silence distractions</li><li>Take short breaks</li><li>Review what you learned</li></ul></article><p class="small muted">Tasks are saved in this browser on this device using localStorage. They are not synced to other devices or accounts.</p></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span data-current-year></span> Bikumo · Bikumo Student Portfolio</p><p>Designed for COS 106 — Introduction to Web Technologies</p></div></footer>
+</body>
+</html>
